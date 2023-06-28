@@ -5,11 +5,14 @@ const btn = document.getElementById("btn");
 const output = document.getElementById("output");
 
 function show(){
-	setTimeout(function(){
-		output.innerText = text.value;
-	},delay.value)
-	
+	let x = new Promise(function(resolve){
+		setTimeout(function(){
+			output.innerText = text.value;
+		},delay.value)
+	})
+	return x;
 }
 btn.addEventListener("click",function(e){
+	output.innerText = "";
 	show();
 });
