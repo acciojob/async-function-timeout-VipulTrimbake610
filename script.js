@@ -14,7 +14,7 @@ function show(){
 }
 	async function res(){
 		let result = await show();
-		console.log(result)
+		output.value = result;
 	}
 btn.addEventListener("click",function(e){
 	
