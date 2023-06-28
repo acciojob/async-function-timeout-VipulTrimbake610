@@ -7,15 +7,18 @@ const output = document.getElementById("output");
 function show(){
 	let x = new Promise(function(resolve){
 		setTimeout(function(){
-			output.innerText = text.value;
-			text.value = "";
-			delay.value = "";
+			resolve(text.value);
 		},delay.value)
 	})
 	return x;
 }
+	async function res(){
+		let result = await show();
+		console.log(result)
+	}
 btn.addEventListener("click",function(e){
 	
 	output.innerText = "";
-	show();
+	res();
+	
 });
