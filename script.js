@@ -8,6 +8,8 @@ function show(){
 	let x = new Promise(function(resolve){
 		setTimeout(function(){
 			output.innerText = text.value;
+			text.value = "";
+			delay.value = "";
 		},delay.value)
 	})
 	return x;
@@ -16,6 +18,4 @@ btn.addEventListener("click",function(e){
 	
 	output.innerText = "";
 	show();
-	text.value = "";
-	delay.value = "";
 });
