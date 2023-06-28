@@ -13,6 +13,9 @@ function show(){
 	return x;
 }
 btn.addEventListener("click",function(e){
+	
 	output.innerText = "";
 	show();
+	text.value = "";
+	delay.value = "";
 });
